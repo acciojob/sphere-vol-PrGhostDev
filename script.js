@@ -7,8 +7,11 @@ function volume_sphere() {
     const roundedVolume = volume.toFixed(4);
     const volumeField = document.getElementById('volume');
     volumeField.value = roundedVolume;
+  } else {
+    const volumeField = document.getElementById('volume');
+    volumeField.value = 'NaN';
   }
-  return false;  
+  return false;
 } 
 window.onload = function() {
   document.getElementById('MyForm').onsubmit = volume_sphere;
